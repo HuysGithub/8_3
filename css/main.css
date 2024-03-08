@@ -9,18 +9,17 @@
 :root {
   --dark-color: #000;
 }
+
 .left-img,
 .right-img {
     position: absolute;
     top: calc(50% - 100px); /* Điều chỉnh vị trí dọc */
     left: 10%;
-    opacity: 0; /* Đặt mặc định là ẩn */
-    
     height: 300px; /* Chiều cao */
     width: 200px; /* Chiều rộng */
-    background-image: url('../img/beyeu.jpg'); /* Đường dẫn đến ảnh bên trái */
     background-size: cover;
     background-position: center;
+    background-image: url('../img/beyeu.jpg');
     animation: sway 3s infinite alternate; /* Sử dụng animation sway */
     box-shadow: 0 0 0 5px rgb(255, 255, 255); /* Thêm viền màu trắng */
     z-index: 999;
@@ -29,8 +28,25 @@
 
 .right-img {
     left: 70%; /* Đặt vị trí của ảnh bên phải */
+    background-size: cover;
+    background-position: center;
     background-image: url('../img/beyeutoo.png'); /* Đường dẫn đến ảnh bên phải */
 }
+
+@media only screen and (orientation: portrait) {
+  .left-img,
+  .right-img {
+      /* Điều chỉnh vị trí và kích thước cho ảnh khi màn hình dọc */
+      top: calc(30% - 100px); /* Điều chỉnh vị trí dọc */
+      left: 10%; /* Điều chỉnh vị trí ngang */
+      height: 200px; /* Điều chỉnh chiều cao */
+      width: 133px; /* Điều chỉnh chiều rộng */
+  }
+  .right-img {
+    left: 60%; /* Đặt vị trí của ảnh bên phải */
+}
+}
+
 .show {
   opacity: 1; /* Hiển thị phần tử */
 }
