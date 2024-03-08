@@ -17,6 +17,7 @@
     left: 10%;
     height: 300px; /* Chiều cao */
     width: 200px; /* Chiều rộng */
+    opacity: 0;
     background-size: cover;
     background-position: center;
     background-image: url('../img/beyeu.jpg');
@@ -44,7 +45,7 @@
   }
   .right-img {
     left: 60%; /* Đặt vị trí của ảnh bên phải */
-}
+  }
 }
 
 .show {
